@@ -10,7 +10,8 @@ import (
 func main() {
 	sum := 0
 
-	for i := 0; i < 1000; i++ {
+	//We can start the loop at 3, seeing as this is the lowest factor.
+	for i := 3; i < 1000; i++ {
 		//If i is a multiple of 3 or 5, then add it to sum.
 		if i%3 == 0 || i%5 == 0 {
 			sum += i
