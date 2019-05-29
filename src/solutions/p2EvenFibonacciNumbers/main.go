@@ -22,7 +22,7 @@ func main() {
 	// We must'nt forget to add the first even term to the sum!
 	sum += currentfibonaccinumber
 
-	for nextfibonaccinumber < 4000000 {
+	for currentfibonaccinumber < 4000000 {
 		nextfibonaccinumber = lastfibonaccinumber + currentfibonaccinumber
 
 		//Only add the even values to the sum.
