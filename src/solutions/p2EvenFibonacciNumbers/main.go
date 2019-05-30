@@ -15,11 +15,11 @@ var (
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 //find the sum of the even-valued terms.
 func main() {
-	//Initialize fibonacci number and sum vars with the values we are given in the question
+	//Set the fibonacci number vars with the values we are given in the question
 	lastfibonaccinumber = 1
 	currentfibonaccinumber = 2
 
-	// We must'nt forget to add the first even term to the sum!
+	//We must'nt forget to add the first even term to the sum!
 	sum += currentfibonaccinumber
 
 	for currentfibonaccinumber < 4000000 {
@@ -30,7 +30,7 @@ func main() {
 			sum += nextfibonaccinumber
 		}
 
-		// Reassign the fibonacci numbers for the next loop.
+		//Reassign the fibonacci numbers for the next loop.
 		lastfibonaccinumber = currentfibonaccinumber
 		currentfibonaccinumber = nextfibonaccinumber
 	}
