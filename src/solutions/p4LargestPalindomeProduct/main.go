@@ -16,19 +16,18 @@ var (
 func main() {
 	for i := 999; i >= 0; i-- {
 		//j doesn't need to be initialized at 999, because setting it that high would duplicate the previous i values.
-		// i * j  is the same as j * i , e.g.: i (999) * j (996) would be the same as i (996) * j (999).
+		// i * j  is the same as j * i , e.g.: i (997) * j (996) would be the same as i (996) * j (997), so j = 996 would do.
 		for j := i; j > 0; j-- {
 			numberundertest := i * j
 
-			//Convert to a string before reversing.
-			resultstr := strconv.Itoa(numberundertest)
-			reversedstr := reverse(resultstr)
-			//fmt.Println("\nreversedstr " + reversedstr)
+			numstr := strconv.Itoa(numberundertest)
+			reversedstr := reverse(numstr)
 
-			if resultstr == reversedstr {
+			if numstr == reversedstr {
 				palindromefound = numberundertest
+
 				//Uncomment this line to output the full list of palindromes.
-				//fmt.Printf("\nFound a palindrome! %v == %v", resultstr, reversedstr)
+				//fmt.Printf("\nFound a palindrome! %v == %v", numstr, reversedstr)
 			}
 
 			if palindromefound > largestpalindrome {
