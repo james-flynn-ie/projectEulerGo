@@ -8,7 +8,7 @@ env:
   - GOFLAGS='-mod vendor'
   
   # Workaround for when travis_setup_go can't identify the Go version.
-  - TRAVIS_GO_VERSION="$(cat .go-version)"
+  - TRAVIS_GO_VERSION="1.12.5"
   
 
 before_script:
@@ -21,3 +21,4 @@ script:
   - go build src/solutions/p2EvenFibonacciNumbers/main.go
   - go build src/solutions/p3LargestPrimeFactor/main.go
   - go build src/solutions/p4LargestPalindromeProduct/main.go
+  - find . -name ".goversion" -print
