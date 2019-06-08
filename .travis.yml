@@ -5,6 +5,7 @@ git:
 
 # We need to set this so that we can install golangci-lint in vendor dir.
 env:
+  - GO111MODULES=on
   - GOFLAGS='-mod vendor'
   
   # Workaround for when travis_setup_go can't identify the Go version.
@@ -16,9 +17,8 @@ before_script:
 
 #Each one of these scripts is run in parallel.
 script:
-  - golangci-lint run
+  - find . -name ".goversion" -print && golangci-lint run
   - go build src/solutions/p1multiplesof3And5/main.go
   - go build src/solutions/p2EvenFibonacciNumbers/main.go
   - go build src/solutions/p3LargestPrimeFactor/main.go
   - go build src/solutions/p4LargestPalindromeProduct/main.go
-  - find . -name ".goversion" -print
