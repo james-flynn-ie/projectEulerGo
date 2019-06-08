@@ -5,3 +5,14 @@ go: 1.12.x
 git:
   depth: false
 
+# We need to set these so that we can install golangci-lint in vendor dir.
+env:
+  - GO111MODULE=on
+  - GOFLAGS='-mod vendor'
+
+before_script:
+  - go install github.com/golangci/golangci-lint/cmd/golangci-lint
+
+script:
+  - golangci-lint run
+  - go run GOPATH/src/projectEulerGo/src/solutions/p1multiplesof3And5/main.go
