@@ -5,7 +5,7 @@ git:
 
 #Each one of these scripts is run in parallel.
 script:
-  - go build src/solutions/p1multiplesof3And5/main.go
+  - go build src/solutions/p1Multiplesof3And5/main.go
   - go build src/solutions/p2EvenFibonacciNumbers/main.go
   - go build src/solutions/p3LargestPrimeFactor/main.go
-  - go build src/solutions/p4LargestPalindromeProduct/main.go
+  - go build src/solutions/p4LargestPalindomeProduct/main.go
