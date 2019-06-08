@@ -5,6 +5,7 @@ git:
 
 # We need to set this so that we can install golangci-lint in vendor dir.
 env:
+  - GO111MODULE=on
   - GOFLAGS='-mod vendor'
   global:
     # Workaround for when travis_setup_go can't identify the Go version.
