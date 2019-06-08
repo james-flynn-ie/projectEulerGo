@@ -5,10 +5,13 @@ go: 1.12.x
 git:
   depth: false
 
-# We need to set these so that we can install golangci-lint in vendor dir.
+# We need to set this so that we can install golangci-lint in vendor dir.
 env:
-  - GO111MODULE=on
   - GOFLAGS='-mod vendor'
+  global:
+    # Workaround for when travis_setup_go can't identify the Go version.
+    - TRAVIS_GO_VERSION="$(cat .go-version)"
+  
 
 before_script:
   - go install github.com/golangci/golangci-lint/cmd/golangci-lint
