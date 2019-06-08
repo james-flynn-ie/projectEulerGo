@@ -10,9 +10,9 @@ git:
 env:
   - GO111MODULE=on
   - GOFLAGS='-mod vendor'
-  global:
-    # Workaround for when travis_setup_go can't identify the Go version.
-    - TRAVIS_GO_VERSION="$(cat .go-version)"
+  
+  # Workaround for when travis_setup_go can't identify the Go version.
+  - TRAVIS_GO_VERSION="$(cat .go-version)"
   
 
 before_script:
