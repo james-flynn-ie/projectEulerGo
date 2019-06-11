@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/james-flynn-ie/projectEulerGo.svg)](https://travis-ci.com/james-flynn-ie/projectEulerGo)
+[![Build Status](https://travis-ci.com/james-flynn-ie/projectEulerGo.svg)](https://travis-ci.com/james-flynn-ie/projectEulerGo) [![codebeat badge](https://codebeat.co/badges/16700183-8075-44b6-be22-321e02349a97)](https://codebeat.co/projects/github-com-james-flynn-ie-projecteulergo-master)
+
 
 # projectEulerGo
 ## What is Project Euler?
