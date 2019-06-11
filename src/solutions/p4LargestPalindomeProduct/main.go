@@ -27,7 +27,7 @@ func main() {
 			numstr := strconv.Itoa(numberundertest)
 			reversedstr := reverse(numstr)
 
-			largestpalindrome = checkpalindrome(numstr, reversedstr, numberundertest)
+			largestpalindrome = checkifpalindrome(numstr, reversedstr, numberundertest)
 		}
 	}
 	fmt.Printf("The largest palindrome made from the product of two 3-digit numbers is: %d", largestpalindrome)
@@ -49,21 +49,21 @@ func reverse(s string) string {
 	return string(bytes)
 }
 
-func checkpalindrome(numstr string, reversedstr string, numberundertest int) int {
+func checkifpalindrome(numstr string, reversedstr string, numberundertest int) int {
 	if numstr == reversedstr {
 		palindromefound = numberundertest
 
 		// Uncomment this line to output the full list of palindromes.
 		// fmt.Printf("\nFound a palindrome! %v == %v", numstr, reversedstr)
+
+		largestpalindrome = checkiflargestpalindrome(palindromefound)
 	}
-	assignLargestPalindrome(palindromefound)
 	return largestpalindrome
 }
 
-func assignLargestPalindrome(i int) int {
+func checkiflargestpalindrome(i int) int {
 	if palindromefound > largestpalindrome {
 		largestpalindrome = palindromefound
 	}
-
 	return largestpalindrome
 }
