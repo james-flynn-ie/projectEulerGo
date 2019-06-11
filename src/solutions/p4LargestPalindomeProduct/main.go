@@ -23,26 +23,18 @@ func main() {
 		for j := i; j > 0; j-- {
 			numberundertest := i * j
 
+			// Convert to string, then reverse it.
 			numstr := strconv.Itoa(numberundertest)
 			reversedstr := reverse(numstr)
 
-			if numstr == reversedstr {
-				palindromefound = numberundertest
-
-				// Uncomment this line to output the full list of palindromes.
-				// fmt.Printf("\nFound a palindrome! %v == %v", numstr, reversedstr)
-			}
-
-			if palindromefound > largestpalindrome {
-				largestpalindrome = palindromefound
-			}
+			largestpalindrome = checkpalindrome(numstr, reversedstr, numberundertest)
 		}
 	}
 	fmt.Printf("The largest palindrome made from the product of two 3-digit numbers is: %d", largestpalindrome)
 }
 
 func reverse(s string) string {
-	//UTF-8 String literals are a sequence of bytes, so we can switch them using this type.
+	// UTF-8 String literals are a sequence of bytes, so we can switch them using this type.
 	bytes := []byte(s)
 
 	/*
@@ -55,4 +47,23 @@ func reverse(s string) string {
 		bytes[m], bytes[n] = bytes[n], bytes[m]
 	}
 	return string(bytes)
+}
+
+func checkpalindrome(numstr string, reversedstr string, numberundertest int) int {
+	if numstr == reversedstr {
+		palindromefound = numberundertest
+
+		// Uncomment this line to output the full list of palindromes.
+		// fmt.Printf("\nFound a palindrome! %v == %v", numstr, reversedstr)
+	}
+	assignLargestPalindrome(palindromefound)
+	return largestpalindrome
+}
+
+func assignLargestPalindrome(i int) int {
+	if palindromefound > largestpalindrome {
+		largestpalindrome = palindromefound
+	}
+
+	return largestpalindrome
 }
