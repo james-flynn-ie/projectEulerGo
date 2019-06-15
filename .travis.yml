@@ -10,3 +10,4 @@ script:
   - go run src/solutions/p2EvenFibonacciNumbers/main.go
   - go run src/solutions/p3LargestPrimeFactor/main.go
   - go run src/solutions/p4LargestPalindomeProduct/main.go
+  - go run src/solutions/p5SmallestDivisibleNumber/main.go
