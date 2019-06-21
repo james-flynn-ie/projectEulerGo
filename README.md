@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/james-flynn-ie/projectEulerGo.svg)](https://travis-ci.com/james-flynn-ie/projectEulerGo) [![codebeat badge](https://codebeat.co/badges/bb117dbf-cdc5-4dd4-ad49-7791230285a8)](https://codebeat.co/projects/github-com-james-flynn-ie-projecteulergo-develop)
-
+[![Build Status](https://travis-ci.com/james-flynn-ie/projectEulerGo.svg)](https://travis-ci.com/james-flynn-ie/projectEulerGo) [![codebeat badge](https://codebeat.co/badges/16700183-8075-44b6-be22-321e02349a97)](https://codebeat.co/projects/github-com-james-flynn-ie-projecteulergo-master)
 # projectEulerGo
 ## What is Project Euler?
 `Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.`
