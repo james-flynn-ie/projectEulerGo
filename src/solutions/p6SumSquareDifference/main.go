@@ -1,5 +1,13 @@
 package main
 
+import "fmt"
+
+var (
+	sumofsquares int
+)
+
+const maxnumber = 10
+
 /*
  * https://projecteuler.net/problem=6
  * The sum of the squares of the first ten natural numbers is,
@@ -12,5 +20,8 @@ package main
  * natural numbers and the square of the sum.
  */
 func main() {
-
+	for i := 1; i <= maxnumber; i++ {
+		sumofsquares += i * i
+	}
+	fmt.Printf("The sum of the squares of the first %v natural numbers is: %v", maxnumber, sumofsquares)
 }
