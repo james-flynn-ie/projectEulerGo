@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 var (
+	squaredsum   int
+	sumofnums    int
 	sumofsquares int
 )
 
@@ -21,7 +23,11 @@ const maxnumber = 10
  */
 func main() {
 	for i := 1; i <= maxnumber; i++ {
+		sumofnums += i
 		sumofsquares += i * i
 	}
 	fmt.Printf("The sum of the squares of the first %v natural numbers is: %v", maxnumber, sumofsquares)
+
+	squaredsum = sumofnums * sumofnums
+	fmt.Printf("\nThe squared sum of the first %v natural numbers is: %v", maxnumber, squaredsum)
 }
