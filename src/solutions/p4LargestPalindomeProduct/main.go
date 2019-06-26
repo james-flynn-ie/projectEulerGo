@@ -17,7 +17,7 @@ var (
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
 func main() {
-	for i := 999; i >= 0; i-- {
+	for i := 999; i > 0; i-- {
 		// j doesn't need to be initialized at 999, because setting it that high would duplicate the previous i values.
 		// i * j  is the same as j * i , e.g.: i (997) * j (996) would be the same as i (996) * j (997), so j = 996 would do.
 		for j := i; j > 0; j-- {
