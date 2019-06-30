@@ -9,8 +9,6 @@ var (
 	sumofsquares int
 )
 
-const maxnumber = 100
-
 /*
  * https://projecteuler.net/problem=6
  * The sum of the squares of the first ten natural numbers is,
@@ -23,25 +21,15 @@ const maxnumber = 100
  * natural numbers and the square of the sum.
  */
 func main() {
-	for i := 1; i <= maxnumber; i++ {
-		/*
-		* Find the sum of all the squares from 1 to the highest natural number we
-		* are seeking in the sumofsquares var.
-		 */
-		sumofsquares += i * i
+	const N = 100
 
-		/*
-		* We also want to keep a sum of all the numbers (unsquared) for the next
-		* step, where we square the sum of all the numbers from 1 to the
-		* highest natural number we are seeking.
-		 */
-		sumofnums += i
-	}
-	fmt.Printf("The sum of the squares of the first %v natural numbers is: %v", maxnumber, sumofsquares)
-
+	sumofnums = N * (N + 1) / 2
 	squaredsum = sumofnums * sumofnums
-	fmt.Printf("\nThe squared sum of the squares of the first %v natural numbers is: %v", maxnumber, squaredsum)
+	fmt.Printf("The squared sum of the squares of the first %v natural numbers is: %v", N, squaredsum)
+
+	sumofsquares = (N * (N + 1) * (2*N + 1)) / 6
+	fmt.Printf("\nThe sum of the squares of the first %v natural numbers is: %v", N, sumofsquares)
 
 	difference = squaredsum - sumofsquares
-	fmt.Printf("\ndifference between the sum of the squares and the square of the sum for the first %v natural numbers is: %v", maxnumber, difference)
+	fmt.Printf("\ndifference between the sum of the squares and the square of the sum for the first %v natural numbers is: %v", N, difference)
 }
