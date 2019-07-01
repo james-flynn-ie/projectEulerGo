@@ -35,11 +35,19 @@ func main() {
 }
 
 func calculatesumofnums(N int) int {
+	/*
+	 * We can use the following Sum of Natural Numbers algorithm:
+	 * https: //trans4mind.com/personal_development/mathematics/series/sumNaturalNumbers.htm#mozTocId914933
+	 */
 	sumofnums = N * (N + 1) / 2
 	return sumofnums
 }
 
 func calculatesumofsquare(N int) int {
+	/*
+	 * We can use the following Sum of the Squares of Natural Numbers algorithm:
+	 * https://trans4mind.com/personal_development/mathematics/series/sumNaturalSquares.htm
+	 */
 	sumofsquares = (N * (N + 1) * (2*N + 1)) / 6
 	return sumofsquares
 }
