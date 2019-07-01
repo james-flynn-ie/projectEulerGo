@@ -27,9 +27,14 @@ func main() {
 	squaredsum = sumofnums * sumofnums
 	fmt.Printf("The squared sum of the squares of the first %v natural numbers is: %v", N, squaredsum)
 
-	sumofsquares = (N * (N + 1) * (2*N + 1)) / 6
+	sumofsquares = calculatesumofsquare(N)
 	fmt.Printf("\nThe sum of the squares of the first %v natural numbers is: %v", N, sumofsquares)
 
 	difference = squaredsum - sumofsquares
 	fmt.Printf("\ndifference between the sum of the squares and the square of the sum for the first %v natural numbers is: %v", N, difference)
+}
+
+func calculatesumofsquare(N int) int {
+	sumofsquares = (N * (N + 1) * (2*N + 1)) / 6
+	return sumofsquares
 }
