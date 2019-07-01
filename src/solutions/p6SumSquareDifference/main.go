@@ -23,7 +23,7 @@ var (
 func main() {
 	const N = 100
 
-	sumofnums = N * (N + 1) / 2
+	sumofnums = calculatesumofnums(N)
 	squaredsum = sumofnums * sumofnums
 	fmt.Printf("The squared sum of the squares of the first %v natural numbers is: %v", N, squaredsum)
 
@@ -32,6 +32,11 @@ func main() {
 
 	difference = squaredsum - sumofsquares
 	fmt.Printf("\ndifference between the sum of the squares and the square of the sum for the first %v natural numbers is: %v", N, difference)
+}
+
+func calculatesumofnums(N int) int {
+	sumofnums = N * (N + 1) / 2
+	return sumofnums
 }
 
 func calculatesumofsquare(N int) int {
