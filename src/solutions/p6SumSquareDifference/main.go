@@ -31,7 +31,7 @@ func main() {
 	fmt.Printf("\nThe sum of the squares of the first %v natural numbers is: %v", N, sumofsquares)
 
 	difference = squaredsum - sumofsquares
-	fmt.Printf("\ndifference between the sum of the squares and the square of the sum for the first %v natural numbers is: %v", N, difference)
+	fmt.Printf("\nThe difference between the sum of the squares and the square of the sum for the first %v natural numbers is: %v", N, difference)
 }
 
 func calculatesumofnums(N int) int {
