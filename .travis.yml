@@ -12,4 +12,4 @@ script:
   - go run src/solutions/p4LargestPalindomeProduct/main.go
   - go run src/solutions/p5SmallestDivisibleNumber/main.go
   - go run src/solutions/p6SumSquareDifference/main.go
-  - go run src/solutions/p7tenthousandandfirstprime/main.go
+  - go run src/solutions/p7TenThousandAndFirstPrime/main.go
