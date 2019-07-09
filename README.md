@@ -18,7 +18,7 @@ Feel free to [contribute](https://github.com/james-flynn-ie/projectEulerGo/blob/
 
 The Go Playground is a web service offered by golang.org.
 
-Just copy the code from the main.go file in the solution you want to run into the code window on https://play.golang.org/, and then hit the 'Run' button.
+Just copy the code from the main.go file in the solution you want to run into the code window on <https://play.golang.org/>, and then hit the 'Run' button.
 
 ### Command Line
 
