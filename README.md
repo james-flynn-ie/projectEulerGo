@@ -1,5 +1,7 @@
 # projectEulerGo
 
+[Back to james-flynn-io.github.io](https://james-flynn-ie.github.io/)
+
 [![Build Status](https://travis-ci.com/james-flynn-ie/projectEulerGo.svg)](https://travis-ci.com/james-flynn-ie/projectEulerGo) [![codebeat badge](https://codebeat.co/badges/16700183-8075-44b6-be22-321e02349a97)](https://codebeat.co/projects/github-com-james-flynn-ie-projecteulergo-master)
 
 ## What is Project Euler?
@@ -18,7 +20,7 @@ Feel free to [contribute](https://github.com/james-flynn-ie/projectEulerGo/blob/
 
 The Go Playground is a web service offered by golang.org.
 
-Just copy the code from the main.go file in the solution you want to run into the code window on https://play.golang.org/, and then hit the 'Run' button.
+Just copy the code from the main.go file in the solution you want to run into the code window on <https://play.golang.org/>, and then hit the 'Run' button.
 
 ### Command Line
 
