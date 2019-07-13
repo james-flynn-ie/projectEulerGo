@@ -4,7 +4,7 @@ import "fmt"
 
 var highestprimenumber int
 
-const maxcountervalue = 6
+const maxcountervalue = 10001
 
 /*
  * https://projecteuler.net/problem=7
