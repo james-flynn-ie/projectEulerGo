@@ -16,11 +16,13 @@ func main() {
 	ch := make(chan int)
 	go generatenumbersequence(ch)
 
-	// Start at 2, as 1 is known to be a prime.
+	// Start at 2, as we are told in the problem that 1 isn't a prime.
 	for i := 2; i <= maxcountervalue; i++ {
-		prime := <-ch
+		numberundertest := <-ch
 		ch1 := make(chan int)
-		go filterprimenumbers(ch, ch1, prime)
+
+		// Take the next number in the channel, and check if it's a prime.
+		go filterprimenumbers(ch, ch1, numberundertest)
 		ch = ch1
 	}
 
@@ -28,16 +30,21 @@ func main() {
 	fmt.Printf("\nThe %dth prime factor is: %d", maxcountervalue, highestprimenumber)
 }
 
-func filterprimenumbers(in <-chan int, out chan<- int, prime int) {
+func filterprimenumbers(in <-chan int, out chan<- int, numberundertest int) {
+	/*
+	 * Keep checking the next int in the channel to see if its a prime.
+	 * If not, discard it by redirecting to out channel.
+	 */
 	for {
 		i := <-in
-		if i%prime != 0 {
+		if i%numberundertest != 0 {
 			out <- i
 		}
 	}
 }
 
 func generatenumbersequence(ch chan<- int) {
+	// Write incrementing ints to the channel, for checking if the next number is prime.
 	for i := 2; ; i++ {
 		ch <- i
 	}
