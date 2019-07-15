@@ -55,20 +55,21 @@ func generatenumbersequence(ch chan<- int) {
 }
 
 func formatresultinoutput(maxcountervalue int, highestprimenumber int) {
-	// Have correct number abbreviation in output.
+	// Have correct number abbreviation in output (i.e.: 1st, 2nd, 3rd, etc.).
 	maxcountervaluestring := strconv.Itoa(maxcountervalue)
 	maxcountervaluelastdigit, err := strconv.Atoi(maxcountervaluestring[len(maxcountervaluestring)-1:])
 	if err != nil {
-		fmt.Println("Error: Unable to convert slice to int, ln 36")
+		fmt.Println("Error: Unable to convert slice to int")
 	}
 
-	if maxcountervaluelastdigit == 1 {
+	switch maxcountervaluelastdigit {
+	case 1:
 		fmt.Printf("\nThe %dst prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else if maxcountervaluelastdigit == 2 {
+	case 2:
 		fmt.Printf("\nThe %dnd prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else if maxcountervaluelastdigit == 3 {
+	case 3:
 		fmt.Printf("\nThe %drd prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else {
+	default:
 		fmt.Printf("\nThe %dth prime factor is: %d", maxcountervalue, highestprimenumber)
 	}
 }
