@@ -31,24 +31,7 @@ func main() {
 
 	highestprimenumber := <-ch
 
-	// Have correct number abbreviation in output.
-	maxcountervaluestring := strconv.Itoa(maxcountervalue)
-	maxcountervaluelastdigit, err := strconv.Atoi(maxcountervaluestring[len(maxcountervaluestring)-1:])
-	if err != nil {
-		fmt.Println("Error: Unable to convert slice to int, ln 36")
-	}
-
-	fmt.Print(maxcountervaluelastdigit)
-
-	if maxcountervaluelastdigit == 1 {
-		fmt.Printf("\nThe %dst prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else if maxcountervaluelastdigit == 2 {
-		fmt.Printf("\nThe %dnd prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else if maxcountervaluelastdigit == 3 {
-		fmt.Printf("\nThe %drd prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else {
-		fmt.Printf("\nThe %dth prime factor is: %d", maxcountervalue, highestprimenumber)
-	}
+	formatresultinoutput(maxcountervalue, highestprimenumber)
 }
 
 func filterprimenumbers(in <-chan int, out chan<- int, numberundertest int) {
@@ -68,5 +51,24 @@ func generatenumbersequence(ch chan<- int) {
 	// Write incrementing ints to the channel, for checking if the next number is prime.
 	for i := 2; ; i++ {
 		ch <- i
+	}
+}
+
+func formatresultinoutput(maxcountervalue int, highestprimenumber int) {
+	// Have correct number abbreviation in output.
+	maxcountervaluestring := strconv.Itoa(maxcountervalue)
+	maxcountervaluelastdigit, err := strconv.Atoi(maxcountervaluestring[len(maxcountervaluestring)-1:])
+	if err != nil {
+		fmt.Println("Error: Unable to convert slice to int, ln 36")
+	}
+
+	if maxcountervaluelastdigit == 1 {
+		fmt.Printf("\nThe %dst prime factor is: %d", maxcountervalue, highestprimenumber)
+	} else if maxcountervaluelastdigit == 2 {
+		fmt.Printf("\nThe %dnd prime factor is: %d", maxcountervalue, highestprimenumber)
+	} else if maxcountervaluelastdigit == 3 {
+		fmt.Printf("\nThe %drd prime factor is: %d", maxcountervalue, highestprimenumber)
+	} else {
+		fmt.Printf("\nThe %dth prime factor is: %d", maxcountervalue, highestprimenumber)
 	}
 }
