@@ -33,18 +33,18 @@ func main() {
 
 	// Have correct number abbreviation in output.
 	maxcountervaluestring := strconv.Itoa(maxcountervalue)
-	lastdigit, err := strconv.Atoi(maxcountervaluestring[len(maxcountervaluestring)-1:])
+	maxcountervaluelastdigit, err := strconv.Atoi(maxcountervaluestring[len(maxcountervaluestring)-1:])
 	if err != nil {
 		fmt.Println("Error: Unable to convert slice to int, ln 36")
 	}
 
-	fmt.Print(lastdigit)
+	fmt.Print(maxcountervaluelastdigit)
 
-	if lastdigit == 1 {
+	if maxcountervaluelastdigit == 1 {
 		fmt.Printf("\nThe %dst prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else if lastdigit == 2 {
+	} else if maxcountervaluelastdigit == 2 {
 		fmt.Printf("\nThe %dnd prime factor is: %d", maxcountervalue, highestprimenumber)
-	} else if lastdigit == 3 {
+	} else if maxcountervaluelastdigit == 3 {
 		fmt.Printf("\nThe %drd prime factor is: %d", maxcountervalue, highestprimenumber)
 	} else {
 		fmt.Printf("\nThe %dth prime factor is: %d", maxcountervalue, highestprimenumber)
