@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 var highestprimenumber int
 
@@ -27,7 +30,25 @@ func main() {
 	}
 
 	highestprimenumber := <-ch
-	fmt.Printf("\nThe %dth prime factor is: %d", maxcountervalue, highestprimenumber)
+
+	// Have correct number abbreviation in output.
+	maxcountervaluestring := strconv.Itoa(maxcountervalue)
+	lastdigit, err := strconv.Atoi(maxcountervaluestring[len(maxcountervaluestring)-1:])
+	if err != nil {
+		fmt.Println("Error: Unable to convert slice to int, ln 36")
+	}
+
+	fmt.Print(lastdigit)
+
+	if lastdigit == 1 {
+		fmt.Printf("\nThe %dst prime factor is: %d", maxcountervalue, highestprimenumber)
+	} else if lastdigit == 2 {
+		fmt.Printf("\nThe %dnd prime factor is: %d", maxcountervalue, highestprimenumber)
+	} else if lastdigit == 3 {
+		fmt.Printf("\nThe %drd prime factor is: %d", maxcountervalue, highestprimenumber)
+	} else {
+		fmt.Printf("\nThe %dth prime factor is: %d", maxcountervalue, highestprimenumber)
+	}
 }
 
 func filterprimenumbers(in <-chan int, out chan<- int, numberundertest int) {
