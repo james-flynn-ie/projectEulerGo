@@ -31,7 +31,7 @@ func main() {
 
 	highestprimenumber := <-ch
 
-	formatresultinoutput(maxcountervalue, highestprimenumber)
+	formatresultoutput(maxcountervalue, highestprimenumber)
 }
 
 func filterprimenumbers(in <-chan int, out chan<- int, numberundertest int) {
@@ -54,7 +54,7 @@ func generatenumbersequence(ch chan<- int) {
 	}
 }
 
-func formatresultinoutput(maxcountervalue int, highestprimenumber int) {
+func formatresultoutput(maxcountervalue int, highestprimenumber int) {
 	// Have correct number abbreviation in output (i.e.: 1st, 2nd, 3rd, etc.).
 	maxcountervaluestring := strconv.Itoa(maxcountervalue)
 	maxcountervaluelastdigit, err := strconv.Atoi(maxcountervaluestring[len(maxcountervaluestring)-1:])
