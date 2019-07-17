@@ -34,6 +34,10 @@ func main() {
 	formatresultoutput(maxcountervalue, highestprimenumber)
 }
 
+/*
+ * We use the Sieve Of Eratosthenes to filter out the non-prime numbers.
+ *     https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+ */
 func filterprimenumbers(in <-chan int, out chan<- int, numberundertest int) {
 	/*
 	 * Keep checking the next int in the channel to see if its a prime.
