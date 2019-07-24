@@ -12,7 +12,7 @@ _<https://projecteuler.net/about>_
 
 The purpose of this repository is to share solutions to the [problems](https://projecteuler.net/archives), and to help each other improve as programmers by sharing solutions and suggesting ways to improve the code.
 
-Feel free to [contribute](https://github.com/james-flynn-ie/projectEulerGo/blob/master/CONTRIBUTING.md)!
+Feel free to [contribute](https://james-flynn-ie.github.io/projectEulerGo/CONTRIBUTING)!
 
 ## Running the solutions
 
