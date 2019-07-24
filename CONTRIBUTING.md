@@ -6,7 +6,7 @@ The following is a set of guidelines for contributing to ProjectEulerGo, which i
 
 
 ## Code of Conduct
-This project and everyone participating in it is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to jamesflynnie.help@gmail.com.
+This project and everyone participating in it is governed by the [Code of Conduct](https://james-flynn-ie.github.io/projectEulerGo/CODE_OF_CONDUCT.html). By participating, you are expected to uphold this code. Please report unacceptable behavior to jamesflynnie.help@gmail.com.
 
 ## How Can I Contribute?
 You can start by running through the steps in the README.md file, and please feel free to open a Pull Request if there is anything that might need updating or clarification.
