@@ -13,3 +13,7 @@
 
 # Visual Studio Code workspace file
 *.code-workspace
+
+# Adding Jekyll Plugin files
+Gemfile.lock
+_site/
