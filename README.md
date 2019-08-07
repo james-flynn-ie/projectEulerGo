@@ -1,11 +1,12 @@
 ---
-title: James Flynn's Github Pages
-description: GitHub Page showcasing the portfolio of DevOps Engineer, James Flynn.
+title: James Flynn's ProjectEulerGo GitHub Pages
+description: GitHub Page showcasing Project Euler Solutions written in Golang by DevOps Engineer, James Flynn.
 logo: images/james_pic.png
 social:
   name: James Flynn
   links:
     - https://ie.linkedin.com/in/jamesflynnie
+    - https://github.com/james-flynn-ie/projectEulerGo
 lang: en_IE
 ---
 
