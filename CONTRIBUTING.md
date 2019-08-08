@@ -1,5 +1,15 @@
 ---
+title: Contributing to ProjectEulerGo
+description: Contribution Guide for the james-flynn-ie/projectEulerGo GitHub Repository.
+logo: images/james_pic.png
+social:
+  name: James Flynn
+  links:
+    - https://ie.linkedin.com/in/jamesflynnie
+    - https://github.com/james-flynn-ie/projectEulerGo
+lang: en_IE
 ---
+
 # Contributing to ProjectEulerGo
 
 👍🎉 First off, thanks for taking the time to contribute! 🎉👍
