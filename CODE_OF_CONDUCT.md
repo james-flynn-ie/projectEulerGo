@@ -1,4 +1,13 @@
 ---
+title: Code Of Conduct for ProjectEulerGo
+description: Code Of Conduct for the james-flynn-ie/projectEulerGo GitHub Repository.
+logo: images/james_pic.png
+social:
+  name: James Flynn
+  links:
+    - https://ie.linkedin.com/in/jamesflynnie
+    - https://github.com/james-flynn-ie/projectEulerGo
+lang: en_IE
 ---
 
 # Contributor Covenant Code of Conduct
